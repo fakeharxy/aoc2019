@@ -11,11 +11,7 @@ class Day01
   end
 
   def total_input(array)
-    count = 0
-    array.each do |x|
-      count += counter(x)
-    end
-    count
+    array.reduce(0) { |initial, total| initial + counter(total) }
   end
 
   def counter(number)

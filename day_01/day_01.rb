@@ -5,7 +5,7 @@ require_relative './counter'
 
 class Day01
   def initialize
-    array = FileLoader.new('./input.txt').to_a
+    array = FileLoader.new('./input.txt').to_a_from_file
     @counter = Counter.new
     p total_input(array)
   end
@@ -17,12 +17,11 @@ class Day01
   def counter(number)
     total = 0
     while @counter.run(number) > 0
-      number = @counter.run(number)
-      total += number
+      result = @counter.run(number)
+      total += result
     end
     total
   end
-
 end
 
 app = Day01.new

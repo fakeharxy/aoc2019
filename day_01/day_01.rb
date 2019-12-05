@@ -17,8 +17,8 @@ class Day01
   def counter(number)
     total = 0
     while @counter.run(number) > 0
-      result = @counter.run(number)
-      total += result
+      number = @counter.run(number)
+      total += number
     end
     total
   end

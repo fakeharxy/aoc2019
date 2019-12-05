@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 require_relative '../file_loader'
-require_relative './pointer'
+require_relative './compiler'
 
 class Day02
 end

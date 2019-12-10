@@ -10,6 +10,6 @@ class FileLoader
   end
 
   def to_a_from_line(line_num)
-    @file.split("\n")[line_num-1].split(',').map(&:to_i)
+    @file.split("\n")[line_num-1].split(',')
   end
 end

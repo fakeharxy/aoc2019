@@ -1,13 +1,15 @@
+# frozen_string_literal: true
+
 class FileLoader
   def initialize(file_path)
     @file = File.read(file_path)
   end
 
   def to_a_from_file
-    @file.split("\n").map { |num| num.to_i }
+    @file.split("\n").map(&:to_i)
   end
 
-  def to_a_from_line
-    @file.split(",").map { |num| num.to_i }
+  def to_a_from_line(line_num)
+    @file.split("\n")[line_num-1].split(',').map(&:to_i)
   end
 end
